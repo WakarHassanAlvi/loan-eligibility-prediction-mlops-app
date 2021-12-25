@@ -73,6 +73,9 @@ Please follow the following link for Airflow installation:<br>
 https://airflow.apache.org/docs/apache-airflow/stable/start/local.html
 
 <br>
+Please replace 'host.docker.internal' with 'localhost' in line 27,28 of prediction_dag and line 23,24 of drift_retraining_dag in the dags folder if not using docker.
+
+<br>
 <h4>DAGS Description</h4><br>
 In our project, we have 3 DAGS:<br><br>
 <b>1. </b> Ingestion DAG<br>
