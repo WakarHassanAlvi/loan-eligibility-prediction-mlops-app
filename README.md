@@ -68,6 +68,11 @@ docker-compose up
 Now, you can see the Airflow UI on port 8080 of your localhost so probably on http://127.0.0.1:8080 or http://localhost:8080
 
 <br>
+<h4>For Linux or Mac</h4>
+Please follow the following link for Airflow installation:<br>
+https://airflow.apache.org/docs/apache-airflow/stable/start/local.html
+
+<br>
 <h4>DAGS Description</h4><br>
 In our project, we have 3 DAGS:<br><br>
 <b>1. </b> Ingestion DAG<br>
