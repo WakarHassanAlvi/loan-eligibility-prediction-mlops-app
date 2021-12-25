@@ -47,6 +47,8 @@ docker-compose up airflow-init
 
 <b>6.</b> Now, to finally run Airflow, run the following command:<br>
 docker-compose up
+<br>
+Now, you can see the Airflow UI on port 8080 of your localhost so probably on http://127.0.0.1:8080 or http://localhost:8080
 
 <br>
 <h4>DAGS Description</h4><br>
@@ -62,4 +64,15 @@ This dag will be responsible for making the predictions on the ingested data and
 <br>
 
 <b>3. </b> Detect Drift and Re-train Model Dag:<br>
-This dag will be responsible for detecting drift in the data and if there is, it will re-train the model. This newer model version and all the previous model versions will be managed by <b>MLFlow</b>. MLFlow is used in the training part of the project and it is responsible for moving the right model version into the production as well in the models folder in the root. 
+This dag will be responsible for detecting drift in the data and if there is, it will re-train the model. This newer model version and all the previous model versions will be managed by <b>MLFlow</b>. 
+
+<br>
+
+<h4>MLFlow</h4>
+MLFlow is used in the training part of the project and it is responsible for moving the right model version into the production as well in the models folder in the root.<br>
+To start MLFlow, run the following command:<br><br>
+mlflow server     --backend-store-uri sqlite:///mlruns.db     --default-artifact-root ../tmp/mlruns
+<br><br>
+Now, it will start MLFlow server on port 5000 of your localhost. So most probably, you will see be able to access the MLFlow UI from http://127.0.0.1:5000 or http://localhost:5000
+
+
