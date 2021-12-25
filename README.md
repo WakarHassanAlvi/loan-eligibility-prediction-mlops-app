@@ -15,7 +15,24 @@ Project WorkFlow:
 <h2>Project Setup</h2>
 
 To setup this project on your system, first set the environment by running the pip install requirements.txt<br>
-Once that is done without any errors, we need to setup Airflow:
+Once that is done without any errors, you can start FastAPI and Streamlit by running the following commands in the terminal:<br>
+<h4>For FastAPI</h4>
+uvicorn api.app:app --reload
+
+<br>
+It will start on port 8000 with localhost so probably on http://127.0.0.1:8000 or http://localhost:8000
+
+<br>
+
+<h4>For Streamlit</h4>
+streamlit run streamlit/frontend.py
+
+<br>
+It will start on port 8501 on localhost so probably on http://127.0.0.1:8501 or http://localhost:8501
+
+<br><br>
+
+Now it's time to install and configure Airflow.
 
 <h3>Airflow</h3>
 
