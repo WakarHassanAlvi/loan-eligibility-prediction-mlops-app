@@ -88,6 +88,8 @@ This dag will be responsible for making the predictions on the ingested data and
 <b>3. </b> Detect Drift and Re-train Model Dag:<br>
 This dag will be responsible for detecting drift in the data and if there is, it will re-train the model. This newer model version and all the previous model versions will be managed by <b>MLFlow</b>. 
 
+<br><br>
+<b>(Note: Run these Dags in the same order as mentioned above.</b>)
 <br>
 
 <h4>MLFlow</h4>
