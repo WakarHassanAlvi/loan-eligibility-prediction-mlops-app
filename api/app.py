@@ -12,6 +12,8 @@ from pathlib import Path
 from sklearn.preprocessing import LabelEncoder
 from river.drift import PageHinkley
 
+from decouple import config
+
 ROOT_DIR = Path('./')
 DATA_DIR = ROOT_DIR / 'data'
 MODELS_DIR = ROOT_DIR / 'models'
@@ -161,10 +163,10 @@ async def save_db_predictions(data: List[request_body]) -> bool:
    #query  = "INSERT INTO %s(%s) VALUES(%%s,%%s,%%s)" % ('future_value', cols)
    query = "INSERT INTO future_value VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
-   connection = psycopg2.connect(user='postgres',
-                              password='1234',
-                              host='localhost',
-                              database='prediction_result')
+   connection = psycopg2.connect(user=config('PG_USER'),
+                              password=config('PG_PWD'),
+                              host=config('PG_HOST'),
+                              database=config('PG_DB'))
    # Create a cursor
    cusrsor = connection.cursor()
 
@@ -219,11 +221,10 @@ async def prediction(data: request_body):
     Tax_Liens = received['Tax_Liens']
     prediction_type = received['prediction_type']
     
-
-    connection = psycopg2.connect(user='postgres',
-                                password='1234',
-                                host='localhost',
-                                database='prediction_result')
+    connection = psycopg2.connect(user=config('PG_USER'),
+                                password=config('PG_PWD'),
+                                host=config('PG_HOST'),
+                                database=config('PG_DB'))
     # Create a cursor
     cusrsor = connection.cursor()
 
