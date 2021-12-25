@@ -99,4 +99,7 @@ Now, it will start MLFlow server on port 5000 of your localhost. So most probabl
 
 <br><br>
 
-<b>Note:</b> Please run MLFlow first before running the AIRFLOW Dags as the Retraining Dag depends upon MLFlow for model versioning.
+<b>Important Notes:</b><br>
+<b>1.</b> Please run MLFlow first before running the AIRFLOW Dags as the Retraining Dag depends upon MLFlow for model versioning.
+<br>
+<b>2.</b> Postgres PG Admin local credentials are in the .env file. Please change them according to your PG Admin local system.
