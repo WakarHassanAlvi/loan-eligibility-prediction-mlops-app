@@ -75,4 +75,6 @@ mlflow server     --backend-store-uri sqlite:///mlruns.db     --default-artifact
 <br><br>
 Now, it will start MLFlow server on port 5000 of your localhost. So most probably, you will see be able to access the MLFlow UI from http://127.0.0.1:5000 or http://localhost:5000
 
+<br><br>
 
+<b>Note:</b> Please run MLFlow first before running the AIRFLOW Dags as the Retraining Dag depends upon MLFlow for model versioning.
